@@ -167,9 +167,9 @@ def app_header():
     totalPL=Label(pycrypto,text="total P/L our coin ",bg="#142E54",fg="white",font="Lato 12 bold",padx="5",pady="5",borderwidth=2,relief="groove")
     totalPL.grid(row=0,column=7,sticky=N+S+E+W)
 
-app_nav()
-app_header()
-my_portfolio()
+app_nav()#this app_nav function
+app_header() #this is app_header function
+my_portfolio()#this is our main function
 pycrypto.mainloop()
 print("completed program")
 cursorobj.close()
