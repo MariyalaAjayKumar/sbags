@@ -45,9 +45,9 @@ def my_portfolio():
     
     def font_color(amount):
         if amount>=0:
-            return "green"
+            return "green"  #green indicate your in profit
         else:
-            return "red"
+            return "red"    #red indicate your in loss
     
     def insert_coin():
         cursorobj.execute("INSERT INTO coin(symbol,price,amount) VALUES(?,?,?)",(symbol_txt.get(),price_txt.get(),amount_txt.get()))
@@ -115,7 +115,7 @@ def my_portfolio():
     add_coin=Button(pycrypto,text="ADD COIN",bg="#142E54",fg="white",command=insert_coin,font="Lato 12 bold",borderwidth=2,relief="groove",padx="5",pady="5")
     add_coin.grid(row=coin_row+1,column=4,sticky=N+S+E+W)
 
-    #update coin
+    #update coin here
     portid_update=Entry(pycrypto,borderwidth=2,relief="groove")
     portid_update.grid(row=coin_row+2,column=0)
     symbol_update=Entry(pycrypto,borderwidth=2,relief="groove")
@@ -127,7 +127,7 @@ def my_portfolio():
     update_coin_txt=Button(pycrypto,text="UPDATE",bg="#142E54",fg="white",command=update_coin,font="Lato 12 bold",borderwidth=2,relief="groove",padx="5",pady="5")
     update_coin_txt.grid(row=coin_row+2,column=4,sticky=N+S+E+W)
 
-    #DELETE COIN
+    #DELETE COIN here
     portid_delete=Entry(pycrypto,borderwidth=2,relief="groove")
     portid_delete.grid(row=coin_row+3,column=0)
     delete_coin_txt=Button(pycrypto,text="DELETE",bg="#142E54",fg="white",command=delete_coin,font="Lato 12 bold",borderwidth=2,relief="groove",padx="5",pady="5")
@@ -167,6 +167,7 @@ def app_header():
     totalPL=Label(pycrypto,text="total P/L our coin ",bg="#142E54",fg="white",font="Lato 12 bold",padx="5",pady="5",borderwidth=2,relief="groove")
     totalPL.grid(row=0,column=7,sticky=N+S+E+W)
 
+<<<<<<< HEAD
 app_nav()  #app_nav is a function calling
 app_header()  #app_header also function calling
 my_portfolio() #my_portfolio also main function calling
@@ -174,3 +175,12 @@ pycrypto.mainloop()
 print("completed program")
 cursorobj.close()
 con.close()#closing the whole functionality
+=======
+app_nav()#this app_nav function
+app_header() #this is app_header function
+my_portfolio()#this is our main function
+pycrypto.mainloop()
+print("completed program")
+cursorobj.close()
+con.close()
+>>>>>>> ajaykumar
