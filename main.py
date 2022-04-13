@@ -45,9 +45,9 @@ def my_portfolio():
     
     def font_color(amount):
         if amount>=0:
-            return "green"  #green indicate your in profit
+            return "green"  
         else:
-            return "red"    #red indicate your in loss
+            return "red"    
     
     def insert_coin():
         cursorobj.execute("INSERT INTO coin(symbol,price,amount) VALUES(?,?,?)",(symbol_txt.get(),price_txt.get(),amount_txt.get()))
@@ -167,9 +167,9 @@ def app_header():
     totalPL=Label(pycrypto,text="total P/L our coin ",bg="#142E54",fg="white",font="Lato 12 bold",padx="5",pady="5",borderwidth=2,relief="groove")
     totalPL.grid(row=0,column=7,sticky=N+S+E+W)
 
-app_nav()#this app_nav function
-app_header() #this is app_header function
-my_portfolio()#this is our main function
+app_nav()
+app_header() 
+my_portfolio()
 pycrypto.mainloop()
 print("completed program")
 cursorobj.close()
