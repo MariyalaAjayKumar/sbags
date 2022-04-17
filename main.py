@@ -45,9 +45,9 @@ def my_portfolio():
     
     def font_color(amount):
         if amount>=0:
-            return "green"  #profit
+            return "green"  
         else:
-            return "red"    #loss
+            return "red"    
     
     def insert_coin():
         cursorobj.execute("INSERT INTO coin(symbol,price,amount) VALUES(?,?,?)",(symbol_txt.get(),price_txt.get(),amount_txt.get()))
@@ -169,11 +169,11 @@ def app_header():
 
 
 
-app_nav()  #app_nav is a function calling
-app_header()  #app_header also function calling
-my_portfolio() #my_portfolio also main function calling
+app_nav()
+app_header()  
+my_portfolio() 
 pycrypto.mainloop()
 print("completed program")
 cursorobj.close()
-con.close()#closing the whole functionality
+con.close()
 
