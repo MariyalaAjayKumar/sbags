@@ -45,9 +45,9 @@ def my_portfolio():
     
     def font_color(amount):
         if amount>=0:
-            return "green"  
+            return "green"  #profit
         else:
-            return "red"    
+            return "red"    #loss
     
     def insert_coin():
         cursorobj.execute("INSERT INTO coin(symbol,price,amount) VALUES(?,?,?)",(symbol_txt.get(),price_txt.get(),amount_txt.get()))
