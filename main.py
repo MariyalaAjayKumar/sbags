@@ -175,5 +175,5 @@ my_portfolio()
 pycrypto.mainloop()
 print("completed program")
 cursorobj.close()
-con.close()
+con.close()    #close the console 
 
